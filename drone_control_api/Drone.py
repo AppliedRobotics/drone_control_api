@@ -31,13 +31,15 @@ class Drone:
         # self.startThread(self.__thread_image, self._message_handler_image, f"ws://{ip}:{port}/ws/api/image")
         
         return result
+    
     async def _connect(self, ip: str, port: str):
         try:
             self.__websocket_control = await websockets.connect(f"ws://{ip}:{port}/ws/api/control")
             self.__websocket_utils = await websockets.connect(f"ws://{ip}:{port}/ws/api/util")
-            self.__websocket_image = await websockets.connect(f"ws://{ip}:{port}/ws/api/image")
+            self.__websocket_image = await websockets.connect(f"ws://{ip}:{1235}/ws/api/image")
             return True
-        except:
+        except Exception as e:
+            print("Error connect to drone", e)
             return False
 
     def disconnect(self):
