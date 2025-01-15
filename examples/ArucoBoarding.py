@@ -9,7 +9,7 @@ from drone_control_api import Drone
 from drone_control_api.pid import PID
 
 # Задаем IP и порт для подключения к дрону
-ip = "10.42.0.1"
+ip = "trackingcam3.local"
 port = "1233"
 
 # Переменная для хранения времени последнего сообщения
