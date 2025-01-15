@@ -55,14 +55,14 @@ print("getArm?", client.getArm(), "\n")
 
 print("setYaw?", client.setYaw(0), "\n")
 print("setVelXY?", client.setVelXY(0, 0), "\n")
+print("setVelXYYaw?", client.setVelXYYaw(0, 0, 0), "\n")
 print("gotoXYdrone?", client.gotoXYdrone(0, 0), "\n")
 print("gotoXYodom?", client.gotoXYodom(0, 0), "\n")
 print("setHeight?", client.setHeight(0), "\n")
-
 print("getArucos?", client.getArucos(), "\n")
 print("getCameraPoseAruco?", client.getCameraPoseAruco(), "\n")
-
 print("setMagnet?", client.setMagnet(False), "\n")
+print("getBlobs?", client.getBlobs(False), "\n")
 
 
 print(f"getImage = {client.getImage()}")

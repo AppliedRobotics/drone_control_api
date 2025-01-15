@@ -4,7 +4,7 @@ from drone_control_api.pid import PID
 import datetime
 import math
 
-ip = "10.42.0.1"
+ip = "trackingcam3.local"
 port = "1233"
 
 last_time = None

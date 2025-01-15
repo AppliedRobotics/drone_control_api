@@ -28,7 +28,7 @@ Drone Control API — это Python-пакет для дистанционног
 Установка пакета осуществляется через `pip`. Убедитесь, что у вас установлен Python версии 3.6 или выше.
 
 ```bash
-pip install drone_control_api
+pip3 install drone_control_api --break-system-packages
 ```
 
 
@@ -43,7 +43,7 @@ pip install drone_control_api
 Эти зависимости автоматически устанавливаются вместе с пакетом. Однако, вы также можете установить их вручную, используя файл `requirements.txt`:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 
@@ -66,7 +66,7 @@ client = Drone()
 В директории `examples/` находится скрипт `example.py`, демонстрирующий использование пакета. Запустите его следующей командой:
 
 ```bash
-python examples/example.py
+python3 examples/example.py
 ```
 
 
@@ -134,6 +134,58 @@ python examples/example.py
 - **getUtilsData() -> dict**
   
   Получает данные утилит.
+
+- **setZeroOdomOpticflow()**
+  
+  Устанавливает нулевую точку отсчета для оптического потока.
+
+- **getOdomOpticflow() -> dict**
+  
+  Получает данные одометрии от оптического потока.
+
+- **getLidar() -> dict**
+  
+  Получает данные с лидара.
+
+- **getRPY() -> dict**
+  
+  Получает углы крена (Roll), тангажа (Pitch) и рыскания (Yaw).
+
+- **getHeightBarometer() -> float**
+  
+  Получает высоту по барометру.
+
+- **getHeightRange() -> float**
+  
+  Получает высоту по дальномеру.
+
+- **getArm() -> bool**
+  
+  Получает состояние моторов дрона (вкл/выкл).
+
+- **getArucos() -> dict**
+  
+  Получает информацию об обнаруженных ArUco-маркерах.
+
+- **getCameraPoseAruco() -> dict**
+  
+  Получает позицию камеры относительно ArUco-маркеров.
+
+- **getLight() -> dict**
+  
+  Получает данные с датчиков освещенности.
+
+- **getUltrasonic() -> dict**
+  
+  Получает данные с ультразвуковых датчиков.
+
+- **getBlobs() -> dict**
+  
+  Получает информацию об обнаруженных цветовых пятнах.
+
+- **setVelXYYaw(x: float, y: float, yaw: float)**
+  
+  Устанавливает скорость движения по осям X, Y и скорость поворота вокруг оси Z.
 
 #### Обработчики сообщений
 
